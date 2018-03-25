@@ -15,19 +15,19 @@ app.use(cors())
 
 db.defaults({ data:[] }).write()
 app.get('/kirim',(req,res)=>{
-// kalo pake nodemon db.defaults is here   
+
 var y = db.get('data').value();
-res.send(y); // tampil di monitor
+res.send(y);  
 });
 
 app.post('/kirim', (req, res)=>{
     console.log(req.body);
-    db.get('data').push({ // data input di body dan push to file
+    db.get('data').push({ 
         nama:req.body.nama,
         usia:req.body.usia,
         alamat:req.body.alamat
     }).write();
-    res.send({ // tampil di body response/inspect browser
+    res.send({ 
         status: 'POST berhasil',
         nama: req.body.nama,
         usia: req.body.usia,
