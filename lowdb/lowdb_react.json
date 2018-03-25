@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "nama": "lowdb1",
+      "usia": "25",
+      "alamat": "bsd"
+    },
+    {
+      "nama": "react",
+      "usia": "34",
+      "alamat": "jkt"
+    }
+  ]
+}
